@@ -28,7 +28,7 @@ info:
         name: '@info.app.name@'
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
-        description: 'Atlas of Living Australia'
+        description: 'Portail du GBIF Bénin'
 spring:
     main:
         banner-mode: "off"
@@ -92,10 +92,10 @@ grails:
                 staticparts: none
 ---
 skin:
-    layout: "main"
-    orgNameLong: "Atlas of Living Australia"
-    orgNameShort: "ALA"
-privacyPolicy: "http://www.ala.org.au/about/terms-of-use/privacy-policy/"
+    layout: "ala"
+    orgNameLong: "GBIF Bénin"
+    orgNameShort: "GBIF Benin"
+privacyPolicy: ""
 
 security:
     cas:
@@ -104,7 +104,7 @@ security:
         uriExclusionFilterPattern: '/occurrences/shapeUpload,/images.*,/css.*,/js.*,.*json,/help/.*'
 
 server:
-    contextPath: /ala-hub
+    contextPath: /
 
 environments:
     development:
@@ -112,14 +112,14 @@ environments:
             serverURL: "https://devt.ala.org.au/ala-hub"
         security:
             cas:
-                appServerName: "https://auth.ala.org.au"
+                appServerName: ""
     test:
         security:
             cas:
-                appServerName: "https://auth.ala.org.au"
+                appServerName: ""
     production:
         grails:
-            serverURL: "https://biocache.ala.org.au"
+            serverURL: "http://recherche.gbifbenin.org"
         security:
             cas:
-                appServerName: "https://auth.ala.org.au"
+                appServerName: ""

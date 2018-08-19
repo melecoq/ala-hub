@@ -24,8 +24,8 @@ apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.grails-gsp"
 apply plugin:"asset-pipeline"
-
-apply from: 'https://raw.githubusercontent.com/AtlasOfLivingAustralia/travis-build-configuration/master/travis_grails_publish.gradle'
+//
+//apply from: 'https://raw.githubusercontent.com/AtlasOfLivingAustralia/travis-build-configuration/master/travis_grails_publish.gradle'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -102,7 +102,7 @@ dependencies {
     compile "org.grails.plugins:ala-auth:3.0.2", noCache
 
     if(!inplace) {
-        runtime "au.org.ala.plugins.grails:biocache-hubs:2.0.3-SNAPSHOT", noCache
+        runtime "au.org.ala.plugins.grails:biocache-hubs:2.0.5", noCache
         runtime "au.org.ala.plugins.grails:downloads-plugin:2.0.3", noCache
     }
 

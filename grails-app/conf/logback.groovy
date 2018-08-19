@@ -56,7 +56,6 @@ switch (Environment.current) {
         [
                 (DEBUG): [ // DEBUG and TRACE should only be enabled for non-production environments
 //                           'grails.app',
-                           'au.org.ala.cas',
                            'au.org.ala.hub',
                            'au.org.ala.bootstrap3',
                            'au.org.ala.biocache.hubs',
@@ -97,7 +96,6 @@ root(WARN, [APPENDER])
                 'grails.app.resourceMappers.org.grails.plugin.resource'
         ],
         (WARN): [
-                'au.org.ala.cas.client'
         ],
         (INFO): [
                 'grails.plugin.externalconfig.ExternalConfig',
